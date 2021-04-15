@@ -22,8 +22,13 @@ public class ProductServiceImpl implements ProductService {
 
 	@Override
 	public Product product(Product product) {
-		product.setId(new Random().nextInt());
-		ProdList.add(product);
+		if(product.getId()!=null) {
+			ProdList.remove(product);
+			ProdList.add(product);
+		} else {
+			product.setId(new Random().nextInt());
+			ProdList.add(product);
+		}
 		return product;
 		//return productRepo.save(product);
 

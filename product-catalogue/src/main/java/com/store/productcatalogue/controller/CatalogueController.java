@@ -1,6 +1,8 @@
 package com.store.productcatalogue.controller;
 
+import java.util.Date;
 import java.util.List;
+import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -82,10 +84,25 @@ public class CatalogueController {
 			return ResponseEntity.ok(new ResponseDto(HttpStatus.OK, list)); 
 		return ResponseEntity.ok(new ResponseDto(HttpStatus.NOT_FOUND, null));
 	}
-	
+
 	@DeleteMapping(value = "/orders")
 	void deleteOrders(){
-		orderService.Orders();
+		orderService.deleteOrders();
+	}
+
+
+
+	@GetMapping(value = "/orders-history")
+	ResponseEntity<ResponseDto<Map<Date, OrderResponse>>> orderHistory(){
+		Map<Date, OrderResponse> orderHistory = orderService.orderHistory();
+		if (orderHistory != null)
+			return ResponseEntity.ok(new ResponseDto(HttpStatus.OK, orderHistory)); 
+		return ResponseEntity.ok(new ResponseDto(HttpStatus.NOT_FOUND, null));
+	}
+
+	@GetMapping(value = "/transaction")
+	void transaction(){
+		orderService.transaction();
 	}
 
 }
