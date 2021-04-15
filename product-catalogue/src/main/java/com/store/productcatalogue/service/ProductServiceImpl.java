@@ -7,12 +7,11 @@ import java.util.Random;
 import org.springframework.stereotype.Service;
 
 import com.store.productcatalogue.model.Product;
-import com.store.productcatalogue.repository.ProductRepository;
 
 @Service
 public class ProductServiceImpl implements ProductService {
 
-	ProductRepository productRepo;
+	//ProductRepository productRepo;
 	List<Product> ProdList = new ArrayList<>();
 	
 	@Override

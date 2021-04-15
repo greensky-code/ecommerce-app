@@ -6,18 +6,18 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 
-@Entity
-@Table(name = "Login")
+/*@Entity
+@Table(name = "Login")*/
 public class Login {
 
-	@Id
-	@Column(name = "username")
+	/*@Id
+	@Column(name = "username")*/
 	String username;
 
-	@Column(name = "password")
+//	@Column(name = "password")
 	String password;
 
-	@Column(name = "type")
+	//@Column(name = "type")
 	boolean type;
 
 	public Login() {

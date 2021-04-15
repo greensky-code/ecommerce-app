@@ -1,34 +1,26 @@
 package com.store.productcatalogue.model;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table;
-
-
-@Entity
-@Table(name = "product")
+/*@Entity
+@Table(name = "product")*/
 public class Product {
     
-	@Id
-    @Column(name = "id")
-	@GeneratedValue(strategy=GenerationType.AUTO)
+	//@Id
+    //@Column(name = "id")
+	//@GeneratedValue(strategy=GenerationType.AUTO)
 	private Integer id;
-    @Column(name = "title")
+   // @Column(name = "title")
 	private String title;
-    @Column(name = "color")
+    //@Column(name = "color")
 	private String color;
-    @Column(name = "reason")
+    //@Column(name = "reason")
 	private String reason;
-    @Column(name = "barcode")
+    //@Column(name = "barcode")
 	private String barcode;
-    @Column(name = "desc")
+    //@Column(name = "desc")
 	private String desc;
-    @Column(name = "qty")
+    //@Column(name = "qty")
 	private Integer qty;
-    @Column(name = "price")
+    //@Column(name = "price")
 	private Double price;
 
 	public Product() {

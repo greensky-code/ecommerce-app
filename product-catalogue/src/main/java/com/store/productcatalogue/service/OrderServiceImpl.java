@@ -7,12 +7,11 @@ import org.springframework.stereotype.Service;
 
 import com.store.productcatalogue.model.OrderResponse;
 import com.store.productcatalogue.model.Orders;
-import com.store.productcatalogue.repository.OrderRepository;
 
 @Service
 public class OrderServiceImpl implements OrderService {
 	
-	OrderRepository orderRepo;
+	//OrderRepository orderRepo;
 	List<Orders> orderList = new ArrayList<>();
 
 
