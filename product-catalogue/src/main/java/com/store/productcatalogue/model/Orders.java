@@ -2,26 +2,27 @@ package com.store.productcatalogue.model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+/**
+ * @Author
+ * Dhruv Shah
+ */
 
-
-/*@Entity
-@Table(name = "Orders")*/
+@Entity
+@Table(name = "Orders")
 public class Orders {
 	
-/*    @Id
-    @Column(name = "id")*/
+    @Id
+    @Column(name = "id")
 	private Integer Id;
-  //  @Column(name = "title")
+   @Column(name = "title")
 	private String title;
-    //@Column(name = "barcode")
+    @Column(name = "barcode")
 	private String barcode;
-    //@Column(name = "price")
+    @Column(name = "price")
 	private Double price;
-    //@Column(name = "qty")
+    @Column(name = "qty")
 	private Integer qty;
 	
 	public Orders() {

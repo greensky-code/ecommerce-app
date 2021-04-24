@@ -7,6 +7,10 @@ import org.springframework.stereotype.Service;
 
 import com.store.productcatalogue.model.Login;
 
+/**
+ * @Author
+ * Dhruv Shah
+ */
 @Service
 public class LoginServiceImpl implements LoginService {
 	
