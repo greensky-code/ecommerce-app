@@ -16,7 +16,7 @@ public interface ProductService {
 	List<Product> products();
 	
 	Product product(Product product);
-
+	void deleteProduct(Integer id);
 
 	public void createOrder(Orders order);
 	public OrderResponse Orders();

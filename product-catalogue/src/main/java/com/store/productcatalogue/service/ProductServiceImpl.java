@@ -103,4 +103,15 @@ public class ProductServiceImpl implements ProductService {
 		orderHistory.put(new Date(), response);
 	}
 
+	@Override
+	public void deleteProduct(Integer id) {
+		for(Product prod : ProdList) {
+			if(prod.getId().equals(id)) {
+				ProdList.remove(prod);
+				break;
+			}
+		}
+		
+	}
+
 }
